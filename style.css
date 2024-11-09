@@ -315,8 +315,13 @@ button {
 
 .vehicles-card-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     width: 100%;
     margin: 20px 0;
+    gap: 0 30px;
+    overflow: hidden;
 }
 
 .vehicles-card {
@@ -324,6 +329,7 @@ button {
     width: 400px;
     height: 450px;
     border-radius: 20px;
+    margin: 20px 0;
 }
 
 .vehicles-card img {
@@ -334,11 +340,114 @@ button {
     object-fit: cover;
 }
 
-.vehicles-info {
+.vehicles-card h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
 
+.vehicles-info {
+    display: flex;
+    gap: 0 10px;
 }
 
 .vehicles-info a {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--accent-color2);
+    color: var(--black-color);
+    text-align: center;
+    border-radius: 15%;
+    width: 70px;
+    height: 50px;
+}
+
+.vehicles-info a span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 10px;
 }
 /* Fleet Vehicles */
+
+/* privilege */
+
+.privilege-container {
+    width: 100%;
+}
+
+.privilege-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.privilege-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 280px;
+    /* height: 280px; */
+}
+
+.privilege-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 280px;
+    border-radius: 25px;
+}
+
+.privilege-icon i {
+    font-size: 5rem;
+}
+
+.privilege-icon:nth-child(odd) {
+    background-color: var(--accent-color2);
+}
+
+.privilege-icon:nth-child(even) {
+    background-color: var(--accent-color);
+}
+
+.privilege-desc {
+    width: 280px;
+}
+
+.privilege-desc h3 {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.privilege-desc p {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* privilege */
+
+/* footer */
+
+footer {
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.footer-card {
+    width: 100%;
+    margin: 2rem;
+    background-color: var(--accent-color);
+    border-radius: 35px;
+}
+
+/* footer */
