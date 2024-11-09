@@ -187,7 +187,7 @@ button {
 }
 
 .section-title h1 {
-    align-items: center;
+    text-align: center;
     font-size: 5rem;
     font-weight: 700;
     margin: 100px 0;
@@ -382,7 +382,7 @@ button {
     align-items: center;
     flex-direction: row;
     width: 100%;
-    padding: 0 2rem;
+    padding: 0 4rem;
 }
 
 .privilege-card {
@@ -390,7 +390,7 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 280px;
+    width: 300px;
     /* height: 280px; */
 }
 
@@ -398,8 +398,8 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 300px;
     border-radius: 25px;
 }
 
@@ -431,6 +431,90 @@ button {
 }
 
 /* privilege */
+
+/* promo */
+
+.promo {
+    flex-direction: column;
+    margin: 100px 0;
+}
+
+.promo h1 {
+    margin: 0;
+}
+
+.promo h1 span {
+    color: red;
+}
+
+.promo p {
+    text-align: center;    
+}
+
+.promo-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 4rem;
+    padding: 50px;
+    background-color: var(--accent-color2);
+    border-radius: 35px;
+    gap: 100px;
+}
+
+.promo-info {
+    height: 100%;
+}
+
+.promo-info h3 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.promo-info button {
+    margin-top: 20px;
+}
+
+.promo-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 0 3rem;
+    margin: 20px 0;
+}
+
+.promo-desc ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.promo-desc ul li {
+    margin: 10px 0;
+
+}
+
+.promo-desc ul li span {
+    margin-left: 10px;
+}
+
+.promo-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 200px;
+}
+
+.promo-img img {
+    position: relative;
+    width: 100%;
+    top: -50px;
+}
+/* promo */
 
 /* footer */
 
