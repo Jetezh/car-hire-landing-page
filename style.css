@@ -3,6 +3,8 @@
     --black-color: black;
     --accent-color: #22333B;
     --accent-color2: #EAE0D5;
+    --accent-color-hover:  #22333bac;
+    --accent-color2-hover: #eae0d5c1;
 }
 
 /* font */
@@ -244,6 +246,15 @@ button {
     padding: 15px 35px;
     font-size: 1.2rem;
 }
+
+.services-desc button:hover {
+    cursor: pointer;
+    background-color: var(--accent-color-hover);
+}
+
+.services-desc button:active {
+    transform: scale(.97);
+}
 /* services section */
 
 /* Fleet Vehicles */
@@ -475,6 +486,16 @@ button {
 
 .promo-info button {
     margin-top: 20px;
+    border-radius: 15px;
+}
+
+.promo-info button:hover {
+    cursor: pointer;
+    background-color: var(--accent-color-hover);
+}
+
+.promo-info button:active {
+    transform: scale(.95);
 }
 
 .promo-desc {
@@ -545,6 +566,52 @@ footer {
     flex: 1;
 }
 
+.logo-bottom img {
+    width: 80px;
+    -webkit-filter: invert(1) hue-rotate(180deg) contrast(2);
+    filter: invert(1) hue-rotate(180deg) contrast(2);
+}
+
+.subscribe-form {
+    width: 100%;
+}
+
+.subscribe-desc {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.subscribe-desc p {
+    color: var(--accent-color2);
+}
+
+.subscribe-form input[type='text'] {
+    padding: 15px;
+    width: 50%;
+    border-radius: 7px;
+    border: none;
+    background-color: var(--white-color);
+}
+
+.subscribe-form input[type='submit'] {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--accent-color2);
+    font-weight: 600;
+    transition: all .3s;
+}
+
+.subscribe-form input[type='submit']:hover {
+    cursor: pointer;
+    background-color: var(--accent-color2-hover);
+}
+
+.subscribe-form input[type='submit']:active {
+    transform: scale(.97);
+}
+
 .upper {
     justify-content: space-between;
     width: 100%;
@@ -556,17 +623,20 @@ footer {
 }
 
 .cities-list h3 {
-    margin: 10px 0;
-    text-align: left;
+    width: 100%;
+    margin: 30px 0;
+    color: var(--white-color);
 }
 
 .cities-list ul{
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     flex-direction: column;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    width: 100%;
     gap: 10px;
 }
 
@@ -580,8 +650,9 @@ footer {
 }
 
 .explore-list h3 {
-    margin: 10px 0;
-    text-align: left;
+    width: 100%;
+    margin: 30px 0;
+    color: var(--white-color);
 }
 
 .explore-list ul{
@@ -592,6 +663,7 @@ footer {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    width: 100%;
     gap: 10px;
 }
 
@@ -605,17 +677,20 @@ footer {
 }
 
 .routes-list h3 {
-    margin: 10px 0;
-    text-align: left;
+    width: 100%;
+    margin: 30px 0;
+    color: var(--white-color);
 }
 
 .routes-list ul{
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     flex-direction: column;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    width: 100%;
     gap: 10px;
 }
 
@@ -667,5 +742,6 @@ footer {
 
 .social-media ul li i {
     color: var(--accent-color2);
+    font-size: 1.5em;
 }
 /* footer */
