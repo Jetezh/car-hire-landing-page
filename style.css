@@ -238,8 +238,13 @@ button {
 }
 
 .services-desc p {
-    font-size: 1.1rem;
-    margin: 10px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    font-size: 1.2rem;
+    margin: 17px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .services-desc button{
@@ -343,12 +348,24 @@ button {
     margin: 20px 0;
 }
 
+.image-vehicles-container {
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;   
+    overflow: hidden;
+}
+
 .vehicles-card img {
     box-sizing: border-box;
     width: 400px;
     height: 300px;
-    border-radius: 20px;
     object-fit: cover;
+    transition: all .3s;
+}
+
+.vehicles-card img:hover {
+    cursor: pointer;
+    transform: scale(125%);
 }
 
 .vehicles-card h3 {
@@ -408,22 +425,16 @@ button {
 .privilege-icon {
     display: flex;
     justify-content: center;
+    background-color: var(--accent-color2);
     align-items: center;
     width: 300px;
     height: 300px;
     border-radius: 25px;
 }
 
-.privilege-icon i {
-    font-size: 5rem;
-}
-
-.privilege-icon:nth-child(odd) {
-    background-color: var(--accent-color2);
-}
-
-.privilege-icon:nth-child(even) {
-    background-color: var(--accent-color);
+.privilege-icon img {
+    width: 180px;
+    height: 180px;
 }
 
 .privilege-desc {
