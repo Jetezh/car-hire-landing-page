@@ -3,7 +3,7 @@
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
 const container = document.querySelector('.slider-container');
-const slides = document.querySelectorAll('.slide'); 
+const slides = document.querySelectorAll('.vehicles-card'); 
 
 // nilai offset untuk slides container
 let offset = 0;

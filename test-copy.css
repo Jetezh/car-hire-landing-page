@@ -32,7 +32,6 @@ body {
     width: 100vw;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
 /* start of navbar */
@@ -331,22 +330,39 @@ button {
 }
 
 .vehicles-card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    margin: 20px 0;
-    gap: 0 30px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    height: 450px;
+    margin: 40px 0;
     overflow: hidden;
 }
 
+.slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex: 1 1 auto;
+    /* gap: 0 40px; */
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
 .vehicles-card {
-    /* background-color: var(--accent-color2); */
     width: 400px;
-    height: 450px;
+    height: 100%;
     border-radius: 20px;
     margin: 20px 0;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .image-vehicles-container {
@@ -397,6 +413,35 @@ button {
     font-weight: 600;
     margin-left: 10px;
 }
+
+/* responsiveness */
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+    .slider-container {
+        width: 800%;
+        /* flex: 2 1 auto; */
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .slider-container {
+        width: 600%;
+        flex: 1 1 auto;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .slider-container {
+        width: 150%;
+        flex: 1 1 auto;
+    }
+}
+
+/* responsiveness */
+
 /* Fleet Vehicles */
 
 /* privilege */
@@ -408,10 +453,10 @@ button {
 .privilege-list {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-direction: row;
     width: 100%;
     padding: 0 4rem;
-    flex-wrap: wrap;
 }
 
 .privilege-card {
@@ -420,7 +465,7 @@ button {
     align-items: center;
     flex-direction: column;
     width: 300px;
-    height: 100%;
+    /* height: 280px; */
 }
 
 .privilege-icon {
@@ -525,6 +570,7 @@ button {
 
 .promo-desc ul li {
     margin: 10px 0;
+
 }
 
 .promo-desc ul li span {
@@ -756,231 +802,3 @@ footer {
     font-size: 1.5em;
 }
 /* footer */
-
-/* responsivness */
-
-/* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 480px) {
-    .slider-container {
-        width: 800%;
-        /* flex: 2 1 auto; */
-    }
-}
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-    .slider-container {
-        width: 600%;
-        flex: 1 1 auto;
-    }
-
-    .navbar-container {
-        width: 100vw;
-    }
-
-    .hero-container {
-        height: 70vw;
-    }
-
-    .hero-desc h1 {
-        font-size: 12px;
-    }
-
-    /* services */
-
-    .section-title {
-        display: flex;
-        flex-direction: column;
-        margin: 80px 0;
-        gap: 40px 0;
-    }
-
-    .section-title h1 {
-        font-size: 3rem;
-        margin: 0;
-    }
-
-    .section-title p {
-        text-align: center;
-        margin: 0;
-    }
-
-    .services-card {
-        width: 80vw;
-    }
-
-    .services-desc p {
-        margin: 25px 0;
-    }
-
-    /* services */
-
-    /* fleet */
-
-
-
-    /* fleet */
-
-    /* privileges */
-
-    .privilege-list {
-        justify-content: space-around;
-        gap: 50px 0;
-    }
-
-    /* privileges */
-
-    /* promo */
-
-    .promo-card {
-        gap: 0;
-        padding: 30px;
-    }
-
-    .promo-info h3 {
-        font-size: 3rem;
-    }
-
-    .promo-desc {
-        align-items: flex-start;
-        margin: 0;
-    }
-
-    .promo-desc ul li {
-        display: flex;
-        flex-direction: row;
-        font-size: 1rem;
-        margin: 20px 0;
-    }
-
-    .promo-img {
-        width: 70%;
-        height: 100px;
-    }
-    
-    .promo-img img {
-        position: relative;
-        left: 50%;
-        width: 200%;
-        top: -60px;
-    }
-
-    /* promo */
-
-    /* footer */
-
-    .upper {
-        flex-direction: column;
-    }
-
-    .lower {
-        flex-direction: column-reverse;
-        gap: 30px;
-    }
-
-    .social-media ul li i {
-        font-size: 2em;
-    }
-
-    /* footer */
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 1240px) {
-
-    /* hero  */
-    .slider-container {
-        width: 150%;
-        flex: 1 1 auto;
-    }
-
-    .hero-desc h1 {
-        font-size: 6rem;
-    }
-
-    .hero-desc p {
-        font-size: 1rem;
-    }
-
-    button {
-        font-size: 1.3rem;
-    }
-    /* hero  */
-
-    /* services */
-
-    .services-desc h2 {
-        font-size: 1.3rem;
-    }
-
-    .services-desc p {
-        font-size: .7rem;
-    }
-
-    .services-desc button{
-        padding: 10px 25px;
-        font-size: .7rem;
-    }
-
-    /* services */
-
-    /* fleet */
-
-    /* fleet */
-
-    /* privileges */
-
-    .privilege-list {
-        padding: 0 1rem;
-    }
-
-    .privilege-icon {
-        width: 200px;
-        height: 200px;
-    }
-
-    .privilege-icon img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .privilege-desc h3 {
-        text-align: center;
-        font-size: 1.3rem;
-        font-weight: 600;
-    }
-    
-    .privilege-desc p {
-        text-align: center;
-        font-size: .9rem;
-    }
-
-    /* privileges */
-
-    /* promo */
-
-    .promo {
-        margin-bottom: 150px;
-    }
-
-    .promo-card {
-        flex-wrap: wrap-reverse;
-        margin: 0 8rem;
-    }
-
-    .promo-img {
-        width: 50%;
-        height: 200px;
-    }
-    
-    .promo-img img {
-        position: relative;
-        left: 50%;
-        width: 180%;
-        top: -60px;
-    }
-
-    /* promo */
-}
-
-/* responsivness */
