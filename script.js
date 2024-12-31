@@ -1,9 +1,9 @@
-// fungsi keseluruhan dari kode javascript ini hanyalah untuk penggunaan slider pada bagian armada mobil
+// fungsi untuk penggunaan slider pada bagian armada mobil
 
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
 const container = document.querySelector('.slider-container');
-const slides = document.querySelectorAll('.slide'); 
+const slides = document.querySelectorAll('.vehicles-card'); 
 
 // nilai offset untuk slides container
 let offset = 0;
@@ -97,4 +97,18 @@ prev.addEventListener('click', () => {
         // menetapkan increment ID ke Decrement ID sebelumnya
         slideIncrement = slideDecrement + 1;
     }, 500);
+})
+
+
+// fungsi untuk popup aside form order
+const openBtn = document.getElementById('openFormOrder');
+const closeBtn = document.getElementById('closeFormOrder');
+const formOrder = document.getElementById('orderForm');
+
+openBtn.addEventListener('click', () => {
+    formOrder.classList.add('open');
+})
+
+closeBtn.addEventListener('click', () => {
+    formOrder.classList.remove('open');
 })

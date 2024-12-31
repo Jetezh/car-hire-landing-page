@@ -22,6 +22,9 @@
         referrerpolicy="no-referrer" />
     </head>
     <body>
+
+        <!-- header section -->
+
         <header class="navbar-container">
             <div class="logo">
                 <img src="/Gambar/logo.png" alt="logo" />
@@ -36,6 +39,11 @@
             <div></div>
             </nav>
         </header>
+
+        <!-- header section -->
+
+        <!-- main section -->
+
         <main>
             <section id="home" class="hero-container">
                 <div class="hero">
@@ -43,25 +51,49 @@
                     <div class="hero-desc">
                         <h1>Sewa Mobil Mewah</h1>
                         <p>Kami Menyediakan Penyewaan Mobil Mewah & Pelayanan Secara Profesional<br>"Perjalanan Nyaman, Kenangan Tak Terlupakan"</p>
-                        <button>Pesan</button>
+                        <button id="openFormOrder">Pesan</button>
                     </div>
                 </div>
             </section>
-            <!-- <aside class="card-order-container">
-                <div class="order-base">
-                    <div class="ob-1">
-                        <div class="element-block"></div>
-                    </div>
-                    <div class="ob-2">
 
-                        <input type="submit" value="Pesan Sekarang">
+            <!-- popup aside -->
+
+            <aside class="popup-form" id="orderForm">
+                <div class="card-order-container">
+                    <button id="closeFormOrder" class="close-btn" >Tutup</button>
+                    <div class="card-order-inner">
+                        <div class="ob-1">
+                            <ul>
+                                <li>Jarak</li>
+                                <li>Estimasi</li>
+                                <li>Tarif</li>
+                            </ul>
+                        </div>
+                        <div class="ob-2">
+                            <form class="order-form">
+                                <input type="text" name="pickupPoint" placeholder="Alamat Jemput">
+                                <input type="text" name="dropoffPoint" placeholder="Alamat Destinasi">
+                                <select name="way" id="way">
+                                    <option value="one-way">Satu Kali Jalan</option>
+                                    <option value="shuttle">Dua Kali Jalan</option>
+                                </select>
+                                <div class="time-of-pickup">
+                                    <label for="timepickup">Waktu Jemput</label>
+                                    <input type="time" id="timepickup" name="timepickup" min="04:00" max="24:00" required />
+                                </div>
+                                <input type="submit" value="Pesan Sekarang">
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </aside> -->
+            </aside>
+
+            <!-- popup aside -->
+
             <section id="services" class="services-container">
                 <div class="section-title">
                     <h1>Layanan</h1>
-                    <p>Kami mengundang anda untuk mencoba layanan kami dan <br>kami secara pribadi menjamin bahwa Anda akan sangat puas</p>
+                    <p>Kami mengundang anda untuk mencoba layanan kami dan kami secara pribadi menjamin bahwa Anda akan sangat puas</p>
                 </div>
                 <div class="article-container">
                     <article class="services-card">
@@ -102,7 +134,7 @@
             <section id="vehicles" class="fleet-container">
                 <div class="section-title">
                     <h1>Armada Kami</h1>
-                    <p>Kami menawarkan armada kendaraan yang luas <br>termasuk sedan, limusin, dan crossover</p>
+                    <p>Kami menawarkan armada kendaraan yang luas termasuk sedan, limusin, dan crossover</p>
                 </div>
                 <div class="category-vehicles">
                     <div class="category-list">
@@ -118,64 +150,65 @@
                         <a class="next btn"><i class="fa-solid fa-angle-right"></i></a>
                     </div>
                 </div>
-                <div class="vehicles-card-container slider-container">
-                    <article class="vehicles-card">
-                        <div class="image-vehicles-container">
-                            <img src="/Gambar/fleet/Gambar-1.jpg" alt="">
-                        </div>
-                        <h3>Mersedes Benz S Class</h3>
-                        <div class="vehicles-info">
-                            <a href="#"><i class="fa-solid fa-user-group"></i><span>4</span></a>
-                            <a href="#"><i class="fa-solid fa-briefcase"></i><span>5</span></a>
-                        </div>
-                    </article>
-                    <article class="vehicles-card">
-                        <div class="image-vehicles-container">
-                            <img src="/Gambar/fleet/Gambar-2.jpg" alt="">
-                        </div>
-                        <h3>BMW Sedan</h3>
-                        <div class="vehicles-info">
-                            <a href="#"><i class="fa-solid fa-user-group"></i><span>2</span></a>
-                            <a href="#"><i class="fa-solid fa-briefcase"></i><span>7</span></a>
-                        </div>
-                    </article>
-                    <article class="vehicles-card">
-                        <div class="image-vehicles-container">
-                            <img src="/Gambar/fleet/Gambar-3.jpg" alt="">
-                        </div>
-                        <h3>Range Rover Suv</h3>
-                        <div class="vehicles-info">
-                            <a href="#"><i class="fa-solid fa-user-group"></i><span>4</span></a>
-                            <a href="#"><i class="fa-solid fa-briefcase"></i><span>10</span></a>
-                        </div>
-                    </article>
-                    <article class="vehicles-card">
-                        <div class="image-vehicles-container">
-                            <img src="/Gambar/fleet/Gambar-4.jpg" alt="">
-                        </div>
-                        <h3>Audi A-series</h3>
-                        <div class="vehicles-info">
-                            <a href="#"><i class="fa-solid fa-user-group"></i><span>2</span></a>
-                            <a href="#"><i class="fa-solid fa-briefcase"></i><span>5</span></a>
-                        </div>
-                    </article>
-                    <article class="vehicles-card">
-                        <div class="image-vehicles-container">
-                            <img src="/Gambar/fleet/Gambar-5.jpg" alt="">
-                        </div>
-                        <h3>Rolls Royce Phantom</h3>
-                        <div class="vehicles-info">
-                            <a href="#"><i class="fa-solid fa-user-group"></i><span>4</span></a>
-                            <a href="#"><i class="fa-solid fa-briefcase"></i><span>2</span></a>
-                        </div>
-                    </article>
+                <div class="vehicles-card-container">
+                    <div class="slider-container">
+                        <article class="vehicles-card">
+                            <div class="image-vehicles-container">
+                                <img src="/Gambar/fleet/Gambar-1.jpg" alt="">
+                            </div>
+                            <h3>Mersedes Benz S Class</h3>
+                            <div class="vehicles-info">
+                                <a href="#"><i class="fa-solid fa-user-group"></i><span>4</span></a>
+                                <a href="#"><i class="fa-solid fa-briefcase"></i><span>5</span></a>
+                            </div>
+                        </article>
+                        <article class="vehicles-card">
+                            <div class="image-vehicles-container">
+                                <img src="/Gambar/fleet/Gambar-2.jpg" alt="">
+                            </div>
+                            <h3>BMW Sedan</h3>
+                            <div class="vehicles-info">
+                                <a href="#"><i class="fa-solid fa-user-group"></i><span>2</span></a>
+                                <a href="#"><i class="fa-solid fa-briefcase"></i><span>7</span></a>
+                            </div>
+                        </article>
+                        <article class="vehicles-card">
+                            <div class="image-vehicles-container">
+                                <img src="/Gambar/fleet/Gambar-3.jpg" alt="">
+                            </div>
+                            <h3>Range Rover Suv</h3>
+                            <div class="vehicles-info">
+                                <a href="#"><i class="fa-solid fa-user-group"></i><span>4</span></a>
+                                <a href="#"><i class="fa-solid fa-briefcase"></i><span>10</span></a>
+                            </div>
+                        </article>
+                        <article class="vehicles-card">
+                            <div class="image-vehicles-container">
+                                <img src="/Gambar/fleet/Gambar-4.jpg" alt="">
+                            </div>
+                            <h3>Audi A-series</h3>
+                            <div class="vehicles-info">
+                                <a href="#"><i class="fa-solid fa-user-group"></i><span>2</span></a>
+                                <a href="#"><i class="fa-solid fa-briefcase"></i><span>5</span></a>
+                            </div>
+                        </article>
+                        <article class="vehicles-card">
+                            <div class="image-vehicles-container">
+                                <img src="/Gambar/fleet/Gambar-5.jpg" alt="">
+                            </div>
+                            <h3>Rolls Royce Phantom</h3>
+                            <div class="vehicles-info">
+                                <a href="#"><i class="fa-solid fa-user-group"></i><span>4</span></a>
+                                <a href="#"><i class="fa-solid fa-briefcase"></i><span>2</span></a>
+                            </div>
+                        </article>
+                    </div>
                 </div>
-            </section>
 
             <section class="privilege-container">
                 <div class="section-title">
                     <h1>Mengapa Memilih Kami?</h1>
-                    <p>di luxiride kami bangga memberikan layanan ekstensif untuk memenuhi <br>semua kebutuhan Anda dengan layanan pelanggan kelas satu</p>
+                    <p>di luxiride kami bangga memberikan layanan ekstensif untuk memenuhi semua kebutuhan Anda dengan layanan pelanggan kelas satu</p>
                 </div>
                 <div class="privilege-list">
                     <article class="privilege-card">
@@ -248,6 +281,11 @@
             </section>
             
         </main>
+
+        <!-- main section -->
+
+        <!-- footer section -->
+
         <footer>
             <div id="contact" class="footer card">
                 <div class="footer upper">
@@ -322,6 +360,9 @@
                 </div>
             </div>
         </footer>
+
+        <!-- footer section -->
+
         <script src="script.js"></script>
     </body>
 </html>
