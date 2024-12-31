@@ -167,7 +167,6 @@ button {
 /* aside */
 
 .popup-form {
-    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     opacity: 0;
     top: 0;
@@ -176,7 +175,6 @@ button {
     bottom: 0;
     transition: all .3s;
     z-index: -1;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -198,6 +196,16 @@ button {
     border-radius: 30px;
     padding: 20px;
     background-color: var(--accent-color2);
+}
+
+.card-order-container img {
+    position: fixed;
+    box-sizing: border-box;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(50%);
 }
 
 .card-order-inner {
